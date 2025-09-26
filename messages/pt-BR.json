@@ -1,0 +1,23 @@
+{
+  "hero": {
+    "title": "Floresta Amazônica",
+    "subtitle": "Espécies de Aves",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
+  },
+  "nav": {
+    "brand": "PIXII",
+    "download": "Baixar"
+  },
+  "stats": {
+    "title": "Visão Geral do Status de Conservação",
+    "speciesTracked": "Espécies Rastreadas",
+    "nearThreatened": "Quase Ameaçadas",
+    "vulnerable": "Vulneráveis",
+    "endangered": "Em Perigo"
+  },
+  "cta": {
+    "title": "Pronto para Explorar os Dados?",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "button": "Ver Dashboard Interativo"
+  }
+}

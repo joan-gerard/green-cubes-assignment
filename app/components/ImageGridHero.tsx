@@ -1,8 +1,10 @@
 "use client";
 
 import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
+import { useTranslations } from 'next-intl';
 import { useRef } from "react";
 import { AiFillApple, AiFillFileImage } from "react-icons/ai";
+import LanguageSwitcher from './LanguageSwitcher';
 
 const ImageGridHero = ({ children }: { children: React.ReactNode }) => {
   const targetRef = useRef<HTMLDivElement | null>(null);
@@ -26,6 +28,7 @@ const ImageGridHero = ({ children }: { children: React.ReactNode }) => {
 };
 
 const Nav = ({ scrollYProgress }: { scrollYProgress: MotionValue<number> }) => {
+  const t = useTranslations();
   const background = useTransform(scrollYProgress, (i: number) =>
     i === 1 ? "rgb(13,10,9)" : "transparent"
   );
@@ -37,12 +40,15 @@ const Nav = ({ scrollYProgress }: { scrollYProgress: MotionValue<number> }) => {
     >
       <div className="flex items-center gap-2 text-lg text-white">
         <AiFillFileImage className="text-xl" />
-        <span className="font-bold">PIXII</span>
+        <span className="font-bold">{t('nav.brand')}</span>
       </div>
-      <button className="text-sm bg-white text-black hover:opacity-90 transition-opacity font-semibold flex items-center gap-1.5 px-3 py-1.5">
-        <AiFillApple className="text-lg" />
-        <span>Download</span>
-      </button>
+      <div className="flex items-center gap-3">
+        <LanguageSwitcher />
+        <button className="text-sm bg-white text-black hover:opacity-90 transition-opacity font-semibold flex items-center gap-1.5 px-3 py-1.5">
+          <AiFillApple className="text-lg" />
+          <span>{t('nav.download')}</span>
+        </button>
+      </div>
     </motion.nav>
   );
 };
@@ -52,6 +58,7 @@ const Copy = ({
 }: {
   scrollYProgress: MotionValue<number>;
 }) => {
+  const t = useTranslations();
   const copyScale = useTransform(scrollYProgress, [0, 0.75], [1, 0.5]);
   const copyOpacity = useTransform(scrollYProgress, [0, 0.75], [1, 0]);
   const copyY = useTransform(scrollYProgress, [0, 0.75], ["0%", "7.5%"]);
@@ -66,11 +73,11 @@ const Copy = ({
       className="absolute px-8 w-full h-screen z-20 flex flex-col items-center justify-center"
     >
       <h1 className="text-stone-950 text-5xl md:text-7xl font-bold text-center max-w-xl">
-        Photo gallery for artists
+        {t('hero.title')}
+        <span className="block text-green-300">{t('hero.subtitle')}</span>
       </h1>
       <p className="text-stone-600 text-sm md:text-base text-center max-w-xl my-6">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo, minus
-        nisi? Quod praesentium quaerat possimus.
+        {t('hero.description')}
       </p>
       {/* <div className="flex items-center gap-4">
         <button className="px-4 py-2 bg-violet-600 hover:bg-violet-600 transition-colors text-white font-medium">
