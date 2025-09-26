@@ -18,11 +18,9 @@ export const metadata: Metadata = {
 };
 
 export default function LocaleLayout({
-  children,
-  params
+  children
 }: {
   children: React.ReactNode;
-  params: { locale: string };
 }) {
   return (
     <body
