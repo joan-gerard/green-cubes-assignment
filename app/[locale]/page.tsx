@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import ImageGridHero from "../components/ImageGridHero";
 
-export default function Home({ params }: { params: { locale: string } }) {
+export default function Home() {
   const t = useTranslations();
   return (
     <ImageGridHero>
