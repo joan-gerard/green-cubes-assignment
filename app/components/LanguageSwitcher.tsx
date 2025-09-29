@@ -33,7 +33,7 @@ export const LanguageSwitcher = () => {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 text-sm bg-white text-black hover:opacity-90 transition-opacity font-semibold rounded"
+        className="flex items-center gap-2 px-3 py-2 text-sm bg-slate-800 text-white hover:bg-slate-700 transition-colors font-semibold rounded border border-slate-600"
       >
         <span>{currentLanguage.flag}</span>
         <span>{currentLanguage.name}</span>
@@ -55,13 +55,13 @@ export const LanguageSwitcher = () => {
       </button>
 
       {isOpen && (
-        <div className="absolute top-full right-0 mt-1 bg-white border border-gray-200 rounded shadow-lg z-50 min-w-[120px]">
+        <div className="absolute top-full right-0 mt-1 bg-slate-800 border border-slate-600 rounded shadow-lg z-50 min-w-[120px]">
           {languages.map((language) => (
             <button
               key={language.code}
               onClick={() => handleLanguageChange(language.code)}
-              className={`w-full flex items-center gap-2 px-3 py-2 text-sm hover:bg-gray-100 transition-colors ${
-                language.code === locale ? "bg-gray-100 font-semibold" : ""
+              className={`w-full flex items-center gap-2 px-3 py-2 text-sm text-white hover:bg-slate-700 transition-colors ${
+                language.code === locale ? "bg-slate-700 font-semibold" : ""
               }`}
             >
               <span>{language.flag}</span>

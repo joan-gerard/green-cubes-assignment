@@ -37,7 +37,7 @@ export const BarChart = () => {
   );
 
   return (
-    <section className="bg-slate-900 px-4 py-12">
+    <section className="px-4 py-12">
       <div className="mx-auto max-w-4xl">
         <motion.div 
           className="grid grid-cols-1 gap-2 md:grid-cols-[1fr_400px] md:gap-12"

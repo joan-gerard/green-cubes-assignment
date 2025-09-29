@@ -14,7 +14,7 @@ export const ImageGridHero = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <Nav scrollYProgress={scrollYProgress} />
-      <section ref={targetRef} className="bg-white h-[350vh]">
+      <section ref={targetRef} className="bg-slate-900 h-[350vh]">
         <div className="h-screen sticky top-0 z-0 grid grid-cols-3 grid-rows-3 gap-4 p-4 overflow-hidden">
           <Copy scrollYProgress={scrollYProgress} />
           <Images scrollYProgress={scrollYProgress} />
@@ -66,11 +66,11 @@ const Copy = ({
       }}
       className="absolute px-8 w-full h-screen z-20 flex flex-col items-center justify-center"
     >
-      <h1 className="text-stone-950 text-5xl md:text-7xl font-bold text-center max-w-xl">
+      <h1 className="text-white text-5xl md:text-7xl font-bold text-center max-w-xl">
         {t("hero.title")}
         <span className="block text-green-300">{t("hero.subtitle")}</span>
       </h1>
-      <p className="text-stone-600 text-sm md:text-base text-center max-w-xl my-6">
+      <p className="text-gray-300 text-sm md:text-base text-center max-w-xl my-6">
         {t("hero.description")}
       </p>
       {/* <div className="flex items-center gap-4">
