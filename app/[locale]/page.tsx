@@ -1,8 +1,8 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import ImageGridHero from "../components/ImageGridHero";
 
-export default function Home() {
-  const t = useTranslations();
+export default async function Home() {
+  const t = await getTranslations();
   return (
     <ImageGridHero>
       {/* Quick Stats Section */}
