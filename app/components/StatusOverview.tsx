@@ -12,37 +12,19 @@ export const StatusOverview = () => {
         {t("stats.title")}
       </h2>
 
-      <div className="flex flex-col items-center justify-center sm:flex-row">
-        <Stat
-          num={150}
-          suffix="+"
-          subheading={t("stats.speciesTracked")}
-        />
+      <div className="flex flex-col items-start justify-center sm:flex-row">
+        <Stat num={1702} suffix="" subheading={t("stats.speciesWhitelisted")} />
         <div className="h-[1px] w-12 bg-indigo-200 sm:h-12 sm:w-[1px]" />
-        <Stat
-          num={45}
-          suffix=""
-          subheading={t("stats.nearThreatened")}
-        />
+        <Stat num={531} suffix="" subheading={t("stats.registeredByOneOrMoreModel")} />
         <div className="h-[1px] w-12 bg-indigo-200 sm:h-12 sm:w-[1px]" />
-        <Stat
-          num={23}
-          suffix=""
-          subheading={t("stats.vulnerable")}
-        />
-        <div className="h-[1px] w-12 bg-indigo-200 sm:h-12 sm:w-[1px]" />
-        <Stat
-          num={12}
-          suffix=""
-          subheading={t("stats.endangered")}
-        />
+        <Stat num={249} suffix="" subheading={t("stats.registeredBTwoOrMoreModels")} />
       </div>
     </div>
   );
 };
 
 interface Props {
-  num: number;
+  num: number; 
   suffix: string;
   decimals?: number;
   subheading: string;
@@ -71,7 +53,7 @@ const Stat = ({ num, suffix, decimals = 0, subheading }: Props) => {
         <span ref={ref}></span>
         {suffix}
       </p>
-      <p className="max-w-48 text-center text-gray-300">{subheading}</p>
+      <p className="max-w-48 text-center text-gray-300 text-balance">{subheading}</p>
     </div>
   );
 };

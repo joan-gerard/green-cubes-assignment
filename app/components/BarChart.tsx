@@ -44,7 +44,7 @@ export const BarChart = () => {
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 1 }}
+          viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <DatasetSelector selectedDataset={selectedDataset} setSelectedDataset={setSelectedDataset} datasetDescription={datasetDescription} />

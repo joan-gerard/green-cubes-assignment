@@ -9,9 +9,9 @@
   },
   "stats": {
     "title": "Combined Analysis",
-    "speciesTracked": "Species Tracked",
-    "nearThreatened": "Near Threatened",
-    "vulnerable": "Vulnerable",
+    "speciesWhitelisted": "Species Whitelisted",
+    "registeredByOneOrMoreModel": "Registered by one or more model",
+    "registeredBTwoOrMoreModels": "Registered by two or more models",
     "endangered": "Endangered"
   },
   "cta": {
@@ -28,29 +28,119 @@
       "L1": {
         "description": "Based to a Brazil location whitelist",
         "data": [
-          { "acronym": "NE", "status": "Not Evaluated", "count": 0, "percentage": "0.00%" },
-          { "acronym": "DD", "status": "Data Deficient", "count": 0, "percentage": "0.00%" },
-          { "acronym": "LC", "status": "Least Concern", "count": 634, "percentage": "91.09%" },
-          { "acronym": "NT", "status": "Near Threatened", "count": 35, "percentage": "5.03%" },
-          { "acronym": "VU", "status": "Vulnerable", "count": 18, "percentage": "2.59%" },
-          { "acronym": "EN", "status": "Endangered", "count": 7, "percentage": "1.01%" },
-          { "acronym": "CR", "status": "Critically Endangered", "count": 2, "percentage": "0.29%" },
-          { "acronym": "EW", "status": "Extinct in the Wild", "count": 0, "percentage": "0.00%" },
-          { "acronym": "EX", "status": "Extinct", "count": 0, "percentage": "0.00%" }
+          {
+            "acronym": "NE",
+            "status": "Not Evaluated",
+            "count": 0,
+            "percentage": "0.00%"
+          },
+          {
+            "acronym": "DD",
+            "status": "Data Deficient",
+            "count": 0,
+            "percentage": "0.00%"
+          },
+          {
+            "acronym": "LC",
+            "status": "Least Concern",
+            "count": 634,
+            "percentage": "91.09%"
+          },
+          {
+            "acronym": "NT",
+            "status": "Near Threatened",
+            "count": 35,
+            "percentage": "5.03%"
+          },
+          {
+            "acronym": "VU",
+            "status": "registeredBTwoOrMoreModels",
+            "count": 18,
+            "percentage": "2.59%"
+          },
+          {
+            "acronym": "EN",
+            "status": "Endangered",
+            "count": 7,
+            "percentage": "1.01%"
+          },
+          {
+            "acronym": "CR",
+            "status": "Critically Endangered",
+            "count": 2,
+            "percentage": "0.29%"
+          },
+          {
+            "acronym": "EW",
+            "status": "Extinct in the Wild",
+            "count": 0,
+            "percentage": "0.00%"
+          },
+          {
+            "acronym": "EX",
+            "status": "Extinct",
+            "count": 0,
+            "percentage": "0.00%"
+          }
         ]
       },
       "L3": {
         "description": "Species must be captured by two or more of the models",
         "data": [
-          { "acronym": "NE", "status": "Not Evaluated", "count": 0, "percentage": "0.00%" },
-          { "acronym": "DD", "status": "Data Deficient", "count": 0, "percentage": "0.00%" },
-          { "acronym": "LC", "status": "Least Concern", "count": 239, "percentage": "95.22%" },
-          { "acronym": "NT", "status": "Near Threatened", "count": 7, "percentage": "2.79%" },
-          { "acronym": "VU", "status": "Vulnerable", "count": 4, "percentage": "1.59%" },
-          { "acronym": "EN", "status": "Endangered", "count": 1, "percentage": "0.40%" },
-          { "acronym": "CR", "status": "Critically Endangered", "count": 0, "percentage": "0.00%" },
-          { "acronym": "EW", "status": "Extinct in the Wild", "count": 0, "percentage": "0.00%" },
-          { "acronym": "EX", "status": "Extinct", "count": 0, "percentage": "0.00%" }
+          {
+            "acronym": "NE",
+            "status": "Not Evaluated",
+            "count": 0,
+            "percentage": "0.00%"
+          },
+          {
+            "acronym": "DD",
+            "status": "Data Deficient",
+            "count": 0,
+            "percentage": "0.00%"
+          },
+          {
+            "acronym": "LC",
+            "status": "Least Concern",
+            "count": 239,
+            "percentage": "95.22%"
+          },
+          {
+            "acronym": "NT",
+            "status": "Near Threatened",
+            "count": 7,
+            "percentage": "2.79%"
+          },
+          {
+            "acronym": "VU",
+            "status": "registeredBTwoOrMoreModels",
+            "count": 4,
+            "percentage": "1.59%"
+          },
+          {
+            "acronym": "EN",
+            "status": "Endangered",
+            "count": 1,
+            "percentage": "0.40%"
+          },
+          {
+            "acronym": "CR",
+            "status": "Critically Endangered",
+            "count": 0,
+            "percentage": "0.00%"
+          },
+          {
+            "acronym": "EW",
+            "status": "Extinct in the Wild",
+            "count": 0,
+            "percentage": "0.00%"
+          },
+          {
+            "acronym": "EX",
+            "status": "Extinct",
+            "count": 0,
+            "percentage": "0.00%"
+          }
         ]
       }
     }

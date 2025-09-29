@@ -9,9 +9,9 @@
   },
   "stats": {
     "title": "Visão Geral do Status de Conservação",
-    "speciesTracked": "Espécies Rastreadas",
-    "nearThreatened": "Quase Ameaçadas",
-    "vulnerable": "Vulneráveis",
+    "speciesWhitelisted": "Espécies Rastreadas",
+    "registeredByOneOrMoreModel": "Quase Ameaçadas",
+    "registeredBTwoOrMoreModels": "Vulneráveis",
     "endangered": "Em Perigo"
   },
   "cta": {
