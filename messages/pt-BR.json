@@ -23,7 +23,7 @@
     "title": "Dados de Status de Conservação",
     "noSpeciesRecorded": "Nenhuma Espécie Registrada",
     "noSpeciesDescription": "Nenhuma espécie pertencente a estes status de conservação foi registrada:",
-    "showingDataFor": "Mostrando dados para:",
+    "showingDataFor": "* Mostrando dados para:",
     "datasets": {
       "L1": {
         "description": "Baseado em uma lista de localizações do Brasil",

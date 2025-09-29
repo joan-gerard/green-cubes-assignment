@@ -40,7 +40,7 @@ export const BarChart = () => {
     <section className="px-4 py-12">
       <div className="mx-auto max-w-4xl">
         <motion.div 
-          className="grid grid-cols-1 gap-2 md:grid-cols-[1fr_400px] md:gap-12"
+          className="grid grid-cols-1 gap-2 md:grid-cols-[1fr_500px] md:gap-12 items-center"
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"

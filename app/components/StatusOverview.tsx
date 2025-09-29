@@ -8,7 +8,7 @@ export const StatusOverview = () => {
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-20 md:py-24">
-      <h2 className="mb-8 text-center text-base text-white sm:text-lg md:mb-16">
+      <h2 className="mb-8 text-center text-base text-white sm:text-4xl font-bold md:mb-16">
         {t("stats.title")}
       </h2>
 

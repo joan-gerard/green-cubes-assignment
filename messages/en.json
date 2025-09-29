@@ -8,7 +8,7 @@
     "brand": "Amazon"
   },
   "stats": {
-    "title": "Conservation Status Overview",
+    "title": "Combined Analysis",
     "speciesTracked": "Species Tracked",
     "nearThreatened": "Near Threatened",
     "vulnerable": "Vulnerable",
@@ -23,7 +23,7 @@
     "title": "Conservation Status Data",
     "noSpeciesRecorded": "No Species Recorded",
     "noSpeciesDescription": "No species belonging to these conservation statuses have been recorded:",
-    "showingDataFor": "Showing data for:",
+    "showingDataFor": "* Showing data for:",
     "datasets": {
       "L1": {
         "description": "Based to a Brazil location whitelist",

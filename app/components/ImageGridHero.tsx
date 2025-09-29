@@ -14,7 +14,7 @@ export const ImageGridHero = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <Nav scrollYProgress={scrollYProgress} />
-      <section ref={targetRef} className="bg-slate-900 h-[350vh]">
+      <section ref={targetRef} className="h-[350vh]">
         <div className="h-screen sticky top-0 z-0 grid grid-cols-3 grid-rows-3 gap-4 p-4 overflow-hidden">
           <Copy scrollYProgress={scrollYProgress} />
           <Images scrollYProgress={scrollYProgress} />
@@ -28,13 +28,14 @@ export const ImageGridHero = ({ children }: { children: React.ReactNode }) => {
 
 const Nav = ({ scrollYProgress }: { scrollYProgress: MotionValue<number> }) => {
   const t = useTranslations();
+  const opacity = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
   const background = useTransform(scrollYProgress, (i: number) =>
-    i === 1 ? "rgb(13,10,9)" : "transparent"
+    i > 0.1 ? "#000000" : "transparent"
   );
 
   return (
     <motion.nav
-      style={{ background }}
+      style={{ background, opacity }}
       className="px-4 py-2 flex items-center justify-between fixed top-0 left-0 right-0 z-40 transition-colors"
     >
       <div className="flex items-center gap-2 text-lg text-white">
