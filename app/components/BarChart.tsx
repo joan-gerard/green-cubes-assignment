@@ -13,6 +13,11 @@ type ConservationData = {
 
 type DatasetType = "L1" | "L3";
 
+const fadeInUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
+
 export const BarChart = () => {
   const [selectedDataset, setSelectedDataset] = useState<DatasetType>("L1");
   const t = useTranslations('barChart');
@@ -34,14 +39,28 @@ export const BarChart = () => {
   return (
     <section className="bg-slate-900 px-4 py-12">
       <div className="mx-auto max-w-4xl">
-        <div className="grid grid-cols-1 gap-2 md:grid-cols-[1fr_400px] md:gap-12">
+        <motion.div 
+          className="grid grid-cols-1 gap-2 md:grid-cols-[1fr_400px] md:gap-12"
+          variants={fadeInUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
           <DatasetSelector selectedDataset={selectedDataset} setSelectedDataset={setSelectedDataset} datasetDescription={datasetDescription} />
           <div className="col-span-1">
             <Bars data={currentData} />
           </div>
-        </div>
+        </motion.div>
         {zeroCountCategories.length > 0 && (
-          <div className="mt-8 rounded-lg bg-slate-800 p-6">
+          <motion.div 
+            className="mt-8 rounded-lg bg-slate-800 p-6"
+            variants={fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 1 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
             <h4 className="mb-3 text-lg font-semibold text-slate-50">
               {t('noSpeciesRecorded')}
             </h4>
@@ -58,7 +77,7 @@ export const BarChart = () => {
                 </span>
               ))}
             </div>
-          </div>
+          </motion.div>
         )}
       </div>
     </section>
