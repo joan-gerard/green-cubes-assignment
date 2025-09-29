@@ -18,5 +18,41 @@
     "title": "Pronto para Explorar os Dados?",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     "button": "Ver Dashboard Interativo"
+  },
+  "barChart": {
+    "title": "Dados de Status de Conservação",
+    "noSpeciesRecorded": "Nenhuma Espécie Registrada",
+    "noSpeciesDescription": "Nenhuma espécie pertencente a estes status de conservação foi registrada:",
+    "showingDataFor": "Mostrando dados para:",
+    "datasets": {
+      "L1": {
+        "description": "Baseado em uma lista de localizações do Brasil",
+        "data": [
+          { "acronym": "NE", "status": "Não Avaliado", "count": 0, "percentage": "0.00%" },
+          { "acronym": "DD", "status": "Dados Insuficientes", "count": 0, "percentage": "0.00%" },
+          { "acronym": "LC", "status": "Pouco Preocupante", "count": 634, "percentage": "91.09%" },
+          { "acronym": "NT", "status": "Quase Ameaçado", "count": 35, "percentage": "5.03%" },
+          { "acronym": "VU", "status": "Vulnerável", "count": 18, "percentage": "2.59%" },
+          { "acronym": "EN", "status": "Em Perigo", "count": 7, "percentage": "1.01%" },
+          { "acronym": "CR", "status": "Criticamente em Perigo", "count": 2, "percentage": "0.29%" },
+          { "acronym": "EW", "status": "Extinto na Natureza", "count": 0, "percentage": "0.00%" },
+          { "acronym": "EX", "status": "Extinto", "count": 0, "percentage": "0.00%" }
+        ]
+      },
+      "L3": {
+        "description": "Espécies devem ser capturadas por dois ou mais dos modelos",
+        "data": [
+          { "acronym": "NE", "status": "Não Avaliado", "count": 0, "percentage": "0.00%" },
+          { "acronym": "DD", "status": "Dados Insuficientes", "count": 0, "percentage": "0.00%" },
+          { "acronym": "LC", "status": "Pouco Preocupante", "count": 239, "percentage": "95.22%" },
+          { "acronym": "NT", "status": "Quase Ameaçado", "count": 7, "percentage": "2.79%" },
+          { "acronym": "VU", "status": "Vulnerável", "count": 4, "percentage": "1.59%" },
+          { "acronym": "EN", "status": "Em Perigo", "count": 1, "percentage": "0.40%" },
+          { "acronym": "CR", "status": "Criticamente em Perigo", "count": 0, "percentage": "0.00%" },
+          { "acronym": "EW", "status": "Extinto na Natureza", "count": 0, "percentage": "0.00%" },
+          { "acronym": "EX", "status": "Extinto", "count": 0, "percentage": "0.00%" }
+        ]
+      }
+    }
   }
 }

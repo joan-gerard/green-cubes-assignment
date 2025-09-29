@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 type ConservationData = {
@@ -14,95 +15,19 @@ type DatasetType = "L1" | "L3";
 
 export const BarChart = () => {
   const [selectedDataset, setSelectedDataset] = useState<DatasetType>("L1");
+  const t = useTranslations('barChart');
 
-  const data = {
-    L1: {
-      description: "Based to a Brazil location whitelist",
-      items: [
-      { acronym: "NE", status: "Not Evaluated", count: 0, percentage: "0.00%" },
-      {
-        acronym: "DD",
-        status: "Data Deficient",
-        count: 0,
-        percentage: "0.00%",
-      },
-      {
-        acronym: "LC",
-        status: "Least Concern",
-        count: 634,
-        percentage: "91.09%",
-      },
-      {
-        acronym: "NT",
-        status: "Near Threatened",
-        count: 35,
-        percentage: "5.03%",
-      },
-      { acronym: "VU", status: "Vulnerable", count: 18, percentage: "2.59%" },
-      { acronym: "EN", status: "Endangered", count: 7, percentage: "1.01%" },
-      {
-        acronym: "CR",
-        status: "Critically Endangered",
-        count: 2,
-        percentage: "0.29%",
-      },
-      {
-        acronym: "EW",
-        status: "Extinct in the Wild",
-        count: 0,
-        percentage: "0.00%",
-      },
-      { acronym: "EX", status: "Extinct", count: 0, percentage: "0.00%" },
-      ]
-    },
-    L3: {
-      description: "Species must be captured by two or more of the models",
-      items: [
-      { acronym: "NE", status: "Not Evaluated", count: 0, percentage: "0.00%" },
-      {
-        acronym: "DD",
-        status: "Data Deficient",
-        count: 0,
-        percentage: "0.00%",
-      },
-      {
-        acronym: "LC",
-        status: "Least Concern",
-        count: 239,
-        percentage: "95.22%",
-      },
-      {
-        acronym: "NT",
-        status: "Near Threatened",
-        count: 7,
-        percentage: "2.79%",
-      },
-      { acronym: "VU", status: "Vulnerable", count: 4, percentage: "1.59%" },
-      { acronym: "EN", status: "Endangered", count: 1, percentage: "0.40%" },
-      {
-        acronym: "CR",
-        status: "Critically Endangered",
-        count: 0,
-        percentage: "0.00%",
-      },
-      {
-        acronym: "EW",
-        status: "Extinct in the Wild",
-        count: 0,
-        percentage: "0.00%",
-      },
-      { acronym: "EX", status: "Extinct", count: 0, percentage: "0.00%" },
-      ]
-    },
-  };
+  // Get data from translations
+  const datasetData = t.raw(`datasets.${selectedDataset}.data`) as ConservationData[];
+  const datasetDescription = t(`datasets.${selectedDataset}.description`);
 
   // Filter to show only the 5 required categories
-  const currentData = data[selectedDataset].items.filter(item => 
+  const currentData = datasetData.filter(item => 
     ["LC", "NT", "VU", "EN", "CR"].includes(item.acronym)
   );
 
   // Get categories with 0 count for both datasets
-  const zeroCountCategories = data[selectedDataset].items.filter(item => 
+  const zeroCountCategories = datasetData.filter(item => 
     item.count === 0 && ["NE", "DD", "EW", "EX"].includes(item.acronym)
   );
 
@@ -110,7 +35,7 @@ export const BarChart = () => {
     <section className="bg-slate-900 px-4 py-12">
       <div className="mx-auto max-w-4xl">
         <div className="grid grid-cols-1 gap-2 md:grid-cols-[1fr_400px] md:gap-12">
-          <DatasetSelector selectedDataset={selectedDataset} setSelectedDataset={setSelectedDataset} data={data} />
+          <DatasetSelector selectedDataset={selectedDataset} setSelectedDataset={setSelectedDataset} datasetDescription={datasetDescription} />
           <div className="col-span-1">
             <Bars data={currentData} />
           </div>
@@ -118,10 +43,10 @@ export const BarChart = () => {
         {zeroCountCategories.length > 0 && (
           <div className="mt-8 rounded-lg bg-slate-800 p-6">
             <h4 className="mb-3 text-lg font-semibold text-slate-50">
-              No Species Recorded
+              {t('noSpeciesRecorded')}
             </h4>
             <p className="mb-3 text-sm text-slate-300">
-              No species belonging to these conservation statuses have been recorded:
+              {t('noSpeciesDescription')}
             </p>
             <div className="flex flex-wrap gap-2">
               {zeroCountCategories.map((category) => (
@@ -143,16 +68,18 @@ export const BarChart = () => {
 const DatasetSelector = ({
   selectedDataset,
   setSelectedDataset,
-  data,
+  datasetDescription,
 }: {
   selectedDataset: DatasetType;
   setSelectedDataset: (dataset: DatasetType) => void;
-  data: any;
+  datasetDescription: string;
 }) => {
+  const t = useTranslations('barChart');
+  
   return (
     <div className="col-span-1 py-12">
       <h3 className="mb-6 text-3xl font-semibold text-slate-50">
-        Conservation Status Data
+        {t('title')}
       </h3>
       <div className="mb-6 space-y-2">
         {(["L1", "L3"] as DatasetType[]).map((dataset) => {
@@ -178,7 +105,7 @@ const DatasetSelector = ({
       </div>
       <div className="text-slate-400">
         <span className="text-sm">
-          Showing data for: <span className="font-semibold text-white">{selectedDataset}</span> <span className="text-slate-300">({data[selectedDataset].description})</span>
+          {t('showingDataFor')} <span className="font-semibold text-white">{selectedDataset}</span> <span className="text-slate-300">({datasetDescription})</span>
         </span>
       </div>
     </div>
