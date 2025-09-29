@@ -131,8 +131,7 @@ const Images = ({
       <motion.div
         className="row-span-2 relative z-10"
         style={{
-          backgroundImage:
-            "url(https://images.unsplash.com/photo-1517504734587-2890819debab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=607&q=80)",
+          backgroundImage: "url('/closeup-fruit-dove-ptilinopus.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           scale,
@@ -144,8 +143,7 @@ const Images = ({
       <motion.div
         className="row-span-2 relative z-10"
         style={{
-          backgroundImage:
-            "url(https://images.unsplash.com/photo-1602294525148-c3d202338aa3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80)",
+          backgroundImage: "url('/red-bellied-woodpecker.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           scale,
@@ -156,8 +154,7 @@ const Images = ({
       <motion.div
         className="relative z-10"
         style={{
-          backgroundImage:
-            "url(https://plus.unsplash.com/premium_photo-1671751033625-46175f2eb03d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1624&q=80)",
+          backgroundImage: "url('/red-scarlet-macaw.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           scale,
@@ -169,8 +166,7 @@ const Images = ({
       <motion.div
         className="relative z-10"
         style={{
-          backgroundImage:
-            "url(https://images.unsplash.com/photo-1511800453077-8c0afa94175f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80)",
+          backgroundImage: "url('/great-hornbill.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           scale,
@@ -181,8 +177,7 @@ const Images = ({
       <motion.div
         className="relative z-10"
         style={{
-          backgroundImage:
-            "url(https://plus.unsplash.com/premium_photo-1668790459004-780996a6404c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80)",
+          backgroundImage: "url('/halcyon-cyanoventrisbird.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           scale,
