@@ -54,7 +54,7 @@
           },
           {
             "acronym": "VU",
-            "status": "registeredBTwoOrMoreModels",
+            "status": "Vulnerable",
             "count": 18,
             "percentage": "2.59%"
           },
