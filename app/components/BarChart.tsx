@@ -133,7 +133,7 @@ const Bars = ({ data }: { data: ConservationData[] }) => {
       {data.map((item) => {
         const height = maxCount > 0 ? ((item.count / maxCount) * 100).toFixed(2) : 0;
         return (
-          <div key={item.acronym} className="col-span-1">
+          <div key={item.acronym} className="col-span-1 group relative">
             <div className="relative flex h-full w-full items-end overflow-hidden rounded-2xl bg-gradient-to-b from-slate-700 to-slate-800">
               <motion.span
                 animate={{ height: `${height}%` }}
@@ -147,6 +147,16 @@ const Bars = ({ data }: { data: ConservationData[] }) => {
                   {item.count}
                 </span>
               </span>
+            </div>
+            
+            {/* Tooltip */}
+            <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-slate-800 text-slate-50 text-sm rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap z-10">
+              <div className="font-semibold">{item.acronym}</div>
+              <div className="text-xs text-slate-300">{item.status}</div>
+              <div className="text-xs text-slate-400">{item.count} species</div>
+              
+              {/* Tooltip arrow */}
+              <div className="absolute top-full left-1/2 -translate-x-1/2 border-l-4 border-r-4 border-t-4 border-transparent border-t-slate-800"></div>
             </div>
           </div>
         );
