@@ -5,8 +5,7 @@
     "description": "Explore the diverse bird species of the Amazon rainforest and their conservation status. Discover which species are thriving and which face the threat of extinction."
   },
   "nav": {
-    "brand": "PIXII",
-    "download": "Download"
+    "brand": "Amazon"
   },
   "stats": {
     "title": "Conservation Status Overview",

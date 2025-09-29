@@ -3,7 +3,6 @@
 import { motion, MotionValue, useScroll, useTransform } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { useRef } from "react";
-import { AiFillApple, AiFillFileImage } from "react-icons/ai";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export const ImageGridHero = ({ children }: { children: React.ReactNode }) => {
@@ -39,15 +38,10 @@ const Nav = ({ scrollYProgress }: { scrollYProgress: MotionValue<number> }) => {
       className="px-4 py-2 flex items-center justify-between fixed top-0 left-0 right-0 z-40 transition-colors"
     >
       <div className="flex items-center gap-2 text-lg text-white">
-        <AiFillFileImage className="text-xl" />
         <span className="font-bold">{t("nav.brand")}</span>
       </div>
       <div className="flex items-center gap-3">
         <LanguageSwitcher />
-        <button className="text-sm bg-white text-black hover:opacity-90 transition-opacity font-semibold flex items-center gap-1.5 px-3 py-1.5">
-          <AiFillApple className="text-lg" />
-          <span>{t("nav.download")}</span>
-        </button>
       </div>
     </motion.nav>
   );
