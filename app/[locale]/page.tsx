@@ -1,4 +1,4 @@
-import BarPoll from "../components/BarPoll";
+import { BarChart } from "../components/BarChart";
 import { ImageGridHero } from "../components/ImageGridHero";
 import { StatusOverview } from "../components/StatusOverview";
 
@@ -9,7 +9,7 @@ export default async function Home() {
         <></>
       </ImageGridHero>
       <StatusOverview />
-      <BarPoll />
+      <BarChart />
     </>
   );
 }

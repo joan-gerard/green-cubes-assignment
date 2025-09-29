@@ -12,7 +12,7 @@ type ConservationData = {
 
 type DatasetType = "L1" | "L3";
 
-const BarPoll = () => {
+export const BarChart = () => {
   const [selectedDataset, setSelectedDataset] = useState<DatasetType>("L1");
 
   const data = {
@@ -228,5 +228,4 @@ const Bars = ({ data }: { data: ConservationData[] }) => {
   );
 };
 
-export default BarPoll;
 
